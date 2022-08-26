@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+
+import "./App.css";
+import "./Components/Title";
+
+import Title from "./Components/Title";
+import Form from "./Components/Form/Form";
+
+const INFO_SELECTS = [
+  {
+    message: "Age of the Dog (Puppies-max =< 24-months)",
+    form: ["Puppie", "Adult"],
+  },
+  { message: "Calculate how much to feed daily", form: ["Inactive", "Average", "Active", "Athlete"] },
+];
 
 function App() {
+  const [option, setOption] = useState(INFO_SELECTS)
+
+  const logInfo = (props) => {
+    return console.log(option)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Title/>
+      <p className="text-center text-2xl pb-2" onClick={logInfo} >🐶</p>
+      <Form />
     </div>
   );
 }
