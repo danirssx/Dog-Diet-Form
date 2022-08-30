@@ -9,16 +9,14 @@ const Form = (props) => {
     useValue(age);
   };
 
-  const logValue = () => {
-    console.log(value);
-  };
-
   return (
-    <section>
-      <div>
-        <Age selected={value} onChangeYear={FilterValue} logging={logValue} />
-      </div>
-    </section>
+    <div className="pb-4">
+      <Age
+        selected={value}
+        onChangeYear={FilterValue}
+        message={props.mapping}
+      />
+    </div>
   );
 };
 
