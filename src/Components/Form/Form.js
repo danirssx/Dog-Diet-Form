@@ -15,6 +15,7 @@ const Form = (props) => {
         selected={value}
         onChangeYear={FilterValue}
         message={props.mapping}
+        optionNum={props.optionNum}
       />
     </div>
   );

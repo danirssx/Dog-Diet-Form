@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import Form from "./Form";
 
 const FormNew = (props) => {
+  let arrayNum = [];
+
   return (
     <section>
       {props.items.map((list) => {
@@ -10,9 +12,11 @@ const FormNew = (props) => {
             <Form 
             key={list.id}
             mapping={list.message} 
+            optionNum={list.form}
             />
         )
       })}
+      {console.log(arrayNum)}
     </section>
   );
 };

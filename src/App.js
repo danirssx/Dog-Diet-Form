@@ -14,19 +14,19 @@ const INFO_SELECTS = [
     form: ["Puppie", "Adult"],
   },
   { id: 'e2', message: "Calculate how much to feed daily", form: ["Inactive", "Average", "Active", "Athlete"] },
-  { id: 'e3', message: "Calculating daily caloric Intake", form: ["Inactive", "Average", "Active", "Athlete"] },
+  { id: 'e3', message: "Calculating daily caloric Intake", form: ["Productive", "Lala", "Perro", "Ario"] },
 ];
 
 function App() {
   const [option, setOption] = useState(INFO_SELECTS)
 
-  const logInfo = (message) => {
-    setOption((e) => {
-      return e;
-    })
+  const logInfo = () => {
+    option.map(e => console.log(e.form.length))
   }
 
-  console.log(option)
+  const optionNum = () => {
+    return option.map(e => e.form)
+  }
 
   return (
     <div>
