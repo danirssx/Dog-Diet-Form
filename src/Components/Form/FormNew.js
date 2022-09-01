@@ -9,12 +9,14 @@ const FormNew = (props) => {
     <section>
       {props.items.map((list) => {
         return (
-            <Form 
+          <Form
             key={list.id}
-            mapping={list.message} 
+            id={list.id}
+            mapping={list.message}
             optionNum={list.form}
-            />
-        )
+            add={props.addOption}
+          />
+        );
       })}
       {console.log(arrayNum)}
     </section>
