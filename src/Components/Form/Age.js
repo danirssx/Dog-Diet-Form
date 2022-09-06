@@ -8,7 +8,17 @@ const Age = (props) => {
 
   const logOption = (event) => {
     props.onChangeYear(event.target.value);
-  };
+
+    if(event.target.value === 'Adult') {
+      props.booleanHandler(true)
+      props.add()
+    }
+
+    if(event.target.value === 'Puppie') {
+      props.booleanHandler(false)
+      props.add()
+    }
+};
 
   return (
     <section className={`${props.class} container p-8 pt-0 pb-4`}>

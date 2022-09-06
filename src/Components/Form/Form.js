@@ -17,13 +17,10 @@ const Form = (props) => {
 
     if(age === 'Adult' || age === 'Puppie') {
       setClick(true);
-      console.log(age)
       if (int < 1) {
         props.add();
       }
     }
-
-
   };
 
   return (
@@ -35,6 +32,7 @@ const Form = (props) => {
         message={props.mapping}
         id={props.id}
         optionNum={props.optionNum}
+        booleanHandler={props.booleanHandler}
       />
     </div>
   );

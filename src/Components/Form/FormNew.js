@@ -15,10 +15,10 @@ const FormNew = (props) => {
             mapping={list.message}
             optionNum={list.form}
             add={props.addOption}
+            booleanHandler={props.booleanHandler}
           />
         );
       })}
-      {console.log(arrayNum)}
     </section>
   );
 };
