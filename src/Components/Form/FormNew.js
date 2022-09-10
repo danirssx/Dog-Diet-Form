@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Form from "./Form";
 
 const FormNew = (props) => {
+
   let arrayNum = [];
 
   return (
@@ -18,6 +19,9 @@ const FormNew = (props) => {
             booleanHandler={props.booleanHandler}
           />
         );
+      }).filter((list, i, arr) => {
+        console.log('actual', arr[i])
+        return [arr[i]];
       })}
     </section>
   );

@@ -50,21 +50,14 @@ function App() {
   };
 
   const addOptionHandler = () => {
-    const array = [...option, objectFeed];
-    const copy = array.map((e) => e);
-
-    setFirst(copy.shift());
-    setLast(copy.pop());
+    const array = [...option, objectFeed];    
 
     return setOption((newOption) => {
-
-      console.log(first, last);
-
-      return array;
+      return [...option, objectFeed];
     });
   };
 
-  return (
+  return ( 
     <div>
       <Title />
       <p className="text-center text-2xl pb-2" onClick={addOptionHandler}>
